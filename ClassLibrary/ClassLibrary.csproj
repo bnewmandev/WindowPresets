@@ -45,10 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreatePreset.cs" />
+    <Compile Include="GetDimensions.cs" />
+    <Compile Include="ListWindows.cs" />
     <Compile Include="MonitorData.cs" />
     <Compile Include="MonitorInit.cs" />
-    <Compile Include="Preset.cs" />
+    <Compile Include="SavedWindow.cs" />
+    <Compile Include="WorkingWindow.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

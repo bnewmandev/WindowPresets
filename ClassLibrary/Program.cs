@@ -11,8 +11,12 @@ namespace ClassLibrary
     {
         static void Main()
         {
-            // var monitor1 = new MonitorData(1, true);
-            CreatePreset.New(true);
+            MonitorInit.Initialize();
+            var dict = ListWindows.New();
+            Console.WriteLine("Select a window: ");
+            int ProcessId = Convert.ToInt32(Console.ReadLine());
+            var testWindow = new WorkingWindow(dict, ProcessId);
+            testWindow.Write();
             MonitorInit.ExportToXml();
             Console.ReadLine();
         }

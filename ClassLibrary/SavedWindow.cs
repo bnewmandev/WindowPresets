@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -27,6 +28,6 @@ namespace ClassLibrary
             windowName = temp.Application.MainWindowTitle;
             applicationPath = temp.FilePath;
         }
-        public static void Comitt()
+
     }
 }

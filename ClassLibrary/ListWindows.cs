@@ -20,7 +20,7 @@ namespace ClassLibrary
                     Console.WriteLine("Process:   {0}", process.ProcessName);
                     Console.WriteLine("ID:        {0}", process.Id);
                     Console.WriteLine("Title:     {0}", process.MainWindowTitle);
-                    Console.WriteLine("MWH:       {0}", process.MainWindowHandle);
+                    // Console.WriteLine("MWH:       {0}", process.MainWindowHandle);
                     outputDictionary.Add(process.Id, process);
                 }
             }

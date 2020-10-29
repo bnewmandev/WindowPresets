@@ -13,7 +13,7 @@ namespace ClassLibrary
         private static extern int GetWindowRect(IntPtr hwnd, out Rectangle rect);
         
 
-        public static Rectangle GetWindow(IntPtr intPtr)
+        public static Rectangle GetDimens(IntPtr intPtr)
         {
             Console.WriteLine(intPtr);
             Rectangle rect;

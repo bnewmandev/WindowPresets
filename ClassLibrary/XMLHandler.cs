@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,5 +22,27 @@ namespace ClassLibrary
             writer.Serialize(file, output);
             file.Close();
         }
+
+        public static byte[] ObjectToByteArray(Profile output)
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            using (var ms = new MemoryStream())
+            {
+                bf.Serialize(ms, output);
+                return ms.ToArray();
+            }
+        }
+
+        public static void ByteArrayToBin (byte[] output, string name)
+        {
+            string dir = (Environment.SpecialFolder.ApplicationData) + "/WindowsPresets/Profiles/";
+            Directory.CreateDirectory(dir);
+            Directory.CreateDirectory(dir + name);
+            FileStream fs = new FileStream(dir + name + "/" + name +".bin", FileMode.Create, FileAccess.ReadWrite);
+            BinaryWriter bw = new BinaryWriter(fs);
+            bw.Write(output);
+            bw.Close();
+        }
+
     }
 }
